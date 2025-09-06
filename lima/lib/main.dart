@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
-            //mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
@@ -44,27 +44,21 @@ class MyApp extends StatelessWidget {
               Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                //padding: EdgeInsets.all(10.0),
                 child: Padding(
-                  padding: EdgeInsets.all(25.0),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.phone,
-                        color: Colors.teal,
-                      ),
-                      SizedBox(width: 10),
-                      Text(
+                  padding: EdgeInsets.all(10.0),
+                  child: ListTile(
+                    leading: Icon(
+                        Icons.phone, color: Colors.teal),
+                        title: Text(
                         '+234 123456789',
                         style: TextStyle(
                           fontFamily: 'SourceCodePro',
                           color: Colors.teal[900],
                           fontWeight: FontWeight.bold,
                           letterSpacing: 2.5,
-                        ),
                       ),
-                    ],
-                  ),
+                    ),
+                  )
                 ),
               ),
 
@@ -72,21 +66,21 @@ class MyApp extends StatelessWidget {
               Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                //padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(Icons.home, color: Colors.teal),
-                    SizedBox(width: 10),
-                    Text(
+                child: Padding(
+                  padding: EdgeInsets.all(10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email, color: Colors.teal),
+                    title: Text(
                       'ligmaballs@gmail.com',
                       style: TextStyle(
                         fontFamily: 'SourceCodePro',
                         color: Colors.teal[900],
                         fontWeight: FontWeight.bold,
                         letterSpacing: 2.5,
-                      ),
-                    ),
-                  ],
+                      )
+                    )
+                  )
                 ),
               ),
             ],
@@ -96,3 +90,23 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+//  Row(
+//                     children: <Widget>[
+//                       Icon(
+//                         Icons.phone,
+//                         color: Colors.teal,
+//                       ),
+//                       SizedBox(width: 10),
+//                       Text(
+//                         '+234 123456789',
+//                         style: TextStyle(
+//                           fontFamily: 'SourceCodePro',
+//                           color: Colors.teal[900],
+//                           fontWeight: FontWeight.bold,
+//                           letterSpacing: 2.5,
+//                         ),
+//                       ),
+//                     ],
+//                   ),
